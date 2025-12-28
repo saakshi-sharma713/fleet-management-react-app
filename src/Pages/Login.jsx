@@ -16,8 +16,8 @@ const Login = () => {
     }
   return (
     <div style={container}>
-       <input style={LoginItems}type="email" placeholder="Enter Email" value={email} onChange={(e)=>setEmail(e.target.value)}></input>
-       <input style={LoginItems} type="password" placeholder="Enter Passsword" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
+       <input className="LoginItems" type="email" placeholder="Enter Email" value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+       <input  className="LoginItems"  type="password" placeholder="Enter Passsword" value={password} onChange={(e)=>setPassword(e.target.value)}></input>
        <button onClick={()=> handleLogin()}>Login</button>
     </div>
   )
@@ -32,12 +32,6 @@ const container ={
     padding:"10px",
     gap:"15px"
   }
-  const LoginItems={
- 
-    height:"50px",
-    border:"none",
-    borderRadius:"8px",
-
-  }
+  
   
 export default Login
