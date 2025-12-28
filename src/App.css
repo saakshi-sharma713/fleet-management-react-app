@@ -4,3 +4,29 @@
     border-radius:8px;
 
   }
+
+  .sidebar{
+    display:flex;
+    position:fixed;
+    width:350px;
+    flex-direction: column;
+    gap:15px;
+    justify-content: flex-start;
+  background-color: blanchedalmond;
+  height:100vh
+  }
+  .sidebar input{
+    width:250px
+  }
+  .btn{
+       width:250px;
+       background-color: brown;
+       color:white;
+       height:40px;
+       border:none;
+  }
+  .options{
+     width:250px;
+     height:50px;
+     border:none;
+  }

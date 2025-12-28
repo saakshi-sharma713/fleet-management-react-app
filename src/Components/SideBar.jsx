@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { fleetContext } from '../Context/Context';
 
 const SideBar = () => {
-    const {addfleetData} = useContext("fleetContext"); 
+    const {addfleetData} = useContext(fleetContext); 
     const[vehicleNumber,setNumber]= useState("");
     const[selectedVehicle,setVehicle]= useState("");
     const[DriverName,setDriverName] = useState("");
@@ -15,15 +15,16 @@ const SideBar = () => {
             alert("all Fields are required");
         }
         else{
-
+         addfleetData({VehicleRegNo:vehicleNumber,Category:selectedVehicle,DriverName,AvailabilityStatus
+})
         }
     }
   return (
     <div>
-      <div className="Sidebar">
+      <div className="sidebar">
     
      <input  className="LoginItems" type="email" placeholder="Enter Vehicle Number" value={vehicleNumber} onChange={(e)=>setNumber(e.target.value)}></input>
-     <select onChange={(e)=>{setVehicle(e.target.value)}}>
+     <select className='option' onChange={(e)=>{setVehicle(e.target.value)}}>
       <option value="Auto">Auto</option>
       <option value="Car">Car</option>
       <option value="Truck">Truck</option>
@@ -39,7 +40,7 @@ const SideBar = () => {
       
      </select>
 
-     <button onClick={()=>{handleformData()}}>Fleet</button>
+     <button className='btn' onClick={()=>{handleformData()}}>Fleet</button>
       </div>
     </div>
   )
